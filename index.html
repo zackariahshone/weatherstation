@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather Dash Board</h1>
+        <!-- Retrieved data will be dumped here -->
+      
+       
+        <div class="row">
+
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text"><input type="text" id="city">
+
+                            <button id="show">show weather</button>
+                            <div id='history'>
+                                <div id='newTemp' class="container">
+
+                                    <h5>Previous Searches</h5>
+                                    <div class="prevbuttons">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="city-date"><h1>CITY</h1></div>
+                                <div class="citytemp"><h2>temp:</h2></div>
+                                <div class="cityhumidity"><h2>humidity:</h2></div>
+                                <div class="citywind"><h2>wind speed:</h2></div>
+                                <div class="UVin"><h2>UVindex:</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+
+
+                        <div class="row">
+                            <div class="col">
+
+                            </div>
+                            <div class="col">
+                                <div class="citydetails"></div>
+                            </div>
+                        </div>
+                        </p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="jumbotron">
+                                        <div class="date1"></div>
+                                        <hr class="my-4">
+                                        <div id="refresh">
+                                            <div class="wind1"></div>
+                                            <div class="humidity1"></div>
+                                            <div class="temp1"></div>
+                                            <!-- Add extra div for the bonus Fahrenheit temp -->
+                                            <div class="tempF1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="jumbotron">
+                                        <div class="date2"></div>
+                                        <hr class="my-4">
+                                        <div class="refresh">
+
+                                            <div class="wind2"></div>
+                                            <div class="humidity2"></div>
+                                            <div class="temp2"></div>
+                                            <!-- Add extra div for the bonus Fahrenheit temp -->
+                                            <div class="tempF2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="jumbotron">
+                                        <div class="date3"></div>
+                                        <hr class="my-4">
+                                        <div class="refresh">
+                                            <div class="wind3"></div>
+                                            <div class="humidity3"></div>
+                                            <div class="temp3"></div>
+                                            <!-- Add extra div for the bonus Fahrenheit temp -->
+                                            <div class="tempF3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="jumbotron">
+                                        <div class="date3"></div>
+                                        <hr class="my-4">
+                                        <div class="refresh">
+                                            <div class="wind4"></div>
+                                            <div class="humidity4"></div>
+                                            <div class="temp4"></div>
+                                            <!-- Add extra div for the bonus Fahrenheit temp -->
+                                            <div class="tempF4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
