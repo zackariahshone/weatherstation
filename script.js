@@ -1,20 +1,14 @@
 let x = 1;
 let nCity;
-
+let cityLon = 0;
+let cityLat = 0;
 //const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
 
 let date = new Date();
 console.log(date);
 const storage = localStorage;
 let city = '';
-// $('#citybtn').click(function () {
-//     city = $('#city').val();
-//     const nCity = $('<p>');
-//     nCity.text(city);
-//     nCity.attr('id', 'newbtn');
-//     $('.prevbuttons').prepend(nCity);
-//     console.log(city);
-// });
+
 function convert(tempk){
   return  tempf = Math.floor((tempk - 273.15) * 9/5 + 32);
 }
@@ -35,8 +29,8 @@ $('#show').click(function () {
         })
         .then(function (response) {
             console.log(response);
-           const cityLon = response.coord.lon;
-           const cityLat = response.coord.lat;
+            cityLon = response.coord.lon;
+            cityLat = response.coord.lat;
            const iconcode = response.weather[0].icon;
 
            const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
