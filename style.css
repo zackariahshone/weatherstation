@@ -1,6 +1,6 @@
 
 body{
-    background-color: black;
+    background-color:lightblue;
     color: gray;
 }
 .card-body{
@@ -12,4 +12,33 @@ h1{
 }
 .citydetails h2{
     text-align: center;
+}
+.container-weather{
+    padding:1%;
+}
+
+/*  */
+
+.lowUv{
+    background-color: lightblue;
+    color: darkblue;
+    border-radius: 5px;
+}
+
+.medUv{
+    background-color:rgb(223, 210, 28);
+    color: rgb(190, 96, 61);
+    border-radius: 5px;
+}
+
+.highUv{
+    background-color: red;
+    color: black;
+    border-radius: 5px;
+}
+img{
+    width: 50%;
+}
+.card {
+    border-radius: 10%;
 }
