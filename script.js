@@ -45,36 +45,36 @@ $('#show').click(function () {
             $('.citywind').html('<h2> Wind Speed: ' + response.wind.speed + '</h2>');
             $('#weatherIcon').attr('src',iconurl);
             //FOR UV INDEX
-           
+            const uvUrl ="http://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey +"&lat="+ cityLat+"&lon="+cityLon;
+            $.ajax({
+                url: uvUrl,
+                method: "GET"
+            })
+            .then(function(response){
+               let uIndex = response.value;
+                console.log("UV Data: "+response.value);
+                $("#uv").text(response.value);
+                
+                if(uIndex > 9){
+                    $('#uv').removeClass();
+                    $('#uv').addClass('highUv');
+                }
+                 if(uIndex > 5 && uIndex <= 8){
+                    $('#uv').removeClass();
+                     $('#uv').addClass('medUv');
+                 }
+                if(uIndex < 4){
+                    $('#uv').removeClass();
+                    $('#uv').addClass('lowUv');
+                }
+               
+            });
+
         
         });
         
       
-        const uvUrl = "http://api.openweathermap.org/data/2.5/uvi?appid="+APIKey+"&lat="+cityLat+"&lon=" + cityLon;
-        $.ajax({
-            url: uvUrl,
-            method: "GET"
-        })
-        .then(function(response){
-           let uIndex = response.value;
-            console.log("UV Data: "+response.value);
-            $("#uv").text(response.value);
-            
-            if(uIndex > 9){
-                $('#uv').removeClass();
-                $('#uv').addClass('highUv');
-            }
-             if(uIndex > 5 && uIndex <= 8){
-                $('#uv').removeClass();
-                 $('#uv').addClass('medUv');
-             }
-            if(uIndex < 4){
-                $('#uv').removeClass();
-                $('#uv').addClass('lowUv');
-            }
-           
-        });
-
+        
 
    
     const queryURLFive = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
