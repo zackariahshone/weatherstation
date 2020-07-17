@@ -81,8 +81,8 @@ $('#show').click(function () {
             method: "GET"
         })
         .then(function (response) {
-            // console.log(queryURLFive);
-            // console.log(response);
+            console.log(queryURLFive);
+            console.log(response);
            $('.citydetails').html('<h2>' + response.city.name+' Five Day Forcast </h2>');
            let y = 2;
             for (let i = 0; i < 5; i++) {

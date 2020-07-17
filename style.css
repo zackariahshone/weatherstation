@@ -7,6 +7,7 @@ body{
     background: black;
     
 }
+
 h1{
     text-align: center;
 }
@@ -40,5 +41,12 @@ img{
     width: 50%;
 }
 .card {
-    border-radius: 10%;
+   
 }
+
+@media only screen and (max-width: 600px) {
+    .card,.card-body, .col{
+        padding: 0;
+        margin:0;
+    }
+  }
