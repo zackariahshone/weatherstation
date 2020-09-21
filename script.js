@@ -1,7 +1,7 @@
 let x = 1;
 let nCity;
-// let cityLon = 0;
-// let cityLat = 0;
+
+
 //const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
 
 let date = new Date();
@@ -29,8 +29,8 @@ $('#search').click(function () {
         })
         .then(function (response) {
             console.log(response);
-            let cityLon = response.coord.lon;
-            let cityLat = response.coord.lat;
+           const cityLon = response.coord.lon;
+           const cityLat = response.coord.lat;
            const iconcode = response.weather[0].icon;
 
            const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -45,7 +45,7 @@ $('#search').click(function () {
             $('.citywind').html('<h2> Wind Speed: ' + response.wind.speed + '</h2>');
             $('#weatherIcon').attr('src',iconurl);
             //FOR UV INDEX
-            const uvUrl ="http://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey +"&lat="+ cityLat+"&lon="+cityLon;
+            const uvUrl ="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey +"&lat="+ cityLat+"&lon="+cityLon;
             $.ajax({
                 url: uvUrl,
                 method: "GET"
