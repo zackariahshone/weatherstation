@@ -33,7 +33,7 @@ $('#search').click(function () {
            const cityLat = response.coord.lat;
            const iconcode = response.weather[0].icon;
 
-           const iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+           const iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
            //(255.372K − 273.15) × 9/5 + 32
            const tempk =response.main.temp;
             const tempf = convert(tempk);
@@ -45,7 +45,7 @@ $('#search').click(function () {
             $('.citywind').html('<h2> Wind Speed: ' + response.wind.speed + '</h2>');
             $('#weatherIcon').attr('src',iconurl);
             //FOR UV INDEX
-            const uvUrl ="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey +"&lat="+ cityLat+"&lon="+cityLon;
+            let uvUrl ="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey +"&lat="+ cityLat+"&lon="+cityLon;
             $.ajax({
                 url: uvUrl,
                 method: "GET"
