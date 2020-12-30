@@ -14,6 +14,8 @@ function convert(tempk){
 }
 $('#search').click(function () {
     
+    $('.hide').show();
+
     city = $('#city').val();
     const nCity = $('<p>');
     nCity.text(city);
